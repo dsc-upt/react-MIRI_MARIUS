@@ -1,0 +1,126 @@
+button{
+    border-radius: 5px;
+}
+.historyButtons{
+    border-width: 0;
+}
+body {
+    overflow: hidden;
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+}
+
+ol, ul {
+    padding-left: 30px;
+}
+
+.board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.status {
+    margin-bottom: 10px;
+}
+
+.highlightSquare {
+    /*animation: highlight 7s ease-out;*/
+    /*background: #82f663;*/
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+
+}
+
+.blueH{
+    animation: blueH 7s ease-out forwards;
+}
+@keyframes blueH{
+    0%{background: #fff;}
+    10%{background: #3468ff;}
+    20%{background: #fff;}
+    30%{background: #3468ff;}
+    40%{background: #fff;}
+    50%{background: #3468ff;}
+    60%{background: #fff;}
+    70%{background: #3468ff;}
+    80%{background: #fff;}
+    100%{background: #3468ff;
+        border-width: 0;}
+}
+.redH{
+    animation: redH 7s ease-out forwards;
+}
+@keyframes redH{
+    0%{background: #fff;}
+    10%{background: #ff6834;}
+    20%{background: #fff;}
+    30%{background: #ff6834;}
+    40%{background: #fff;}
+    50%{background: #ff6834;}
+    60%{background: #fff;}
+    70%{background: #ff6834;}
+    80%{background: #fff;}
+    100%{background: #ff6834;
+        border-width: 0;}
+}
+.square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+}
+
+.square:focus {
+    outline: none;
+}
+
+.kbd-navigation .square:focus {
+    background: #ddd;
+}
+
+.game {
+    display: flex;
+    flex-direction: row;
+}
+
+.game-info {
+    margin-left: 20px;
+}
+
+.transition{
+    transition: all 0.1s linear;
+}
+.bgX{
+    background: #3468ff;
+}
+.bgY{
+    background: #ff6834;
+}
+.bg{
+    opacity: 0.7;
+    transition: all 2s ease-in 1s;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
